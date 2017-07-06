@@ -351,6 +351,9 @@ class Spotify(object):
         '''
         return self._get('users/' + user)
 
+    def current_user_currently_playing(self, user):
+        return self._get('me/player/currently-playing')
+
     def current_user_playlists(self, limit=50, offset=0):
         """ Get current user playlists without required getting his profile
             Parameters:
